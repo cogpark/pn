@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="robots" content="index,follow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="author" content="Adam Cogbill"/>
+        <meta name="keywords" content="voter registration, registration deadlines, voter ID, voter ID requirements, vote by mail" />
+        <meta name="referrer" content="origin"/>
+        <meta
+        name="description"
+        content="We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting."
+        />
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Participation nation</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
+    </head>
+
+<body>
+    <h1>
+    THIS IS MY TITLE it is a title
+</h1>
+</body>
+    <div class='container' id="content">
+        {% block content %}
+        content
+        {% endblock %}
+    </div>
+
+</html>
