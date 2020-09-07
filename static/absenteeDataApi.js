@@ -5,7 +5,8 @@ window.addEventListener('DOMContentLoaded', (event)=> {
     .then(data => {
         let mailInstructions = data.mail_instructions;
         let inPersonInstructions = data.in_person_instructions;
-
+        document.querySelector('#ab-mail-instructions .card-header > h4').innerText = data.in_person_title;
+        document.querySelector('#ab-person-instructions .card-header > h4').innerText = data.mail_title;
         document.querySelector('#ab-mail-instructions .card-body > p').innerHTML  = mailInstructions;
         document.querySelector('#ab-person-instructions .card-body > p').innerHTML = inPersonInstructions;
         document.querySelector('#deadline-mail-request .card-body > p').innerHTML = data.mail_request_deadline;

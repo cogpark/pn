@@ -23,8 +23,7 @@ def index():
         'Virginia','Washington', 'Washington, D.C.',
         'West Virginia','Wisconsin',
         'Wyoming']
-    print(us_states)
-    
+   
     return render_template('voting-info.html', us_states=us_states)
 
 @app.route("/all-elections")
