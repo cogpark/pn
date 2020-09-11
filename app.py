@@ -26,9 +26,37 @@ def index():
    
     return render_template('voting-info.html', us_states=us_states)
 
-@app.route("/all-elections")
+@app.route('/all-elections')
 def all_elections():
     return render_template('all-elections.html')
+
+@app.route('/amendments-eleven-through-twenty-six')
+def more_amendments():
+    return render_template('more-amendments.html')
+
+@app.route('/bill-of-rights')
+def bill_of_rights():
+    return render_template('bill-of-rights.html')
+
+@app.route('/democratic-socialist')
+def democratic_socialist():
+    return render_template('democratic-socialist.html')
+
+@app.route('/electoral-college')
+def electoral_college():
+    return render_template('electoral-college.html')
+
+@app.route('/executive-order')
+def executive_order():
+    return render_template('executive-order.html')
+
+@app.route('/just-moved-voting')
+def just_moved():
+    return render_template('just-moved-voting.html')
+
+@app.route('/supreme-court')
+def supreme_court():
+    return render_template('supreme-court.html')
 
 
 @app.route('/api/absentee/<state>')

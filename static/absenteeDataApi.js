@@ -13,6 +13,8 @@ window.addEventListener('DOMContentLoaded', (event)=> {
         document.querySelector('#deadline-ballot-submissions .card-body > p').innerHTML = data.ballot_delivery; 
         document.querySelector('#ab-requirements .card-body > p').innerHTML = data.requirements;
         document.querySelector('a#learn-more').href = data.source;
+        document.querySelector('a#learn-more').innerText = "Learn more about voting in " + triggerUpdate.value;
+
     });
 })
 
@@ -28,6 +30,7 @@ triggerUpdate.addEventListener('change', (event) => {
         document.querySelector('#deadline-ballot-submissions .card-body > p').innerHTML = data.ballot_delivery; 
         document.querySelector('#ab-requirements .card-body > p').innerHTML = data.requirements;
         document.querySelector('a#learn-more').href = data.source;
+        document.querySelector('a#learn-more').innerText = "Learn more about voting in " + event.target.value;
     })
 });
 

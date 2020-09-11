@@ -14,22 +14,22 @@
         />
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-        
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Participation nation</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
-    </head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='nav.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    </head>
+{% include 'header.html' %}
 <body>
-    <h1>
-    THIS IS MY TITLE it is a title
-</h1>
-</body>
     <div class='container' id="content">
         {% block content %}
         content
         {% endblock %}
     </div>
+</body>
+   
 
 </html>

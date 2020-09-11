@@ -7,10 +7,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('#reg-in-person .card-body > p').innerText = data.inPerson;
         document.querySelector('#reg-by-mail .card-body > p').innerText = data.byMail;
         document.querySelector('#reg-online .card-body > p').innerText = data.online;
-        console.log(data.onlineRegistration)
+
         if (data.onlineRegistration.length > 1) {
             document.getElementById('vote-online-btn').style.display="inline";
             document.getElementById('vote-online-btn').innerText = "Register to vote online in " + triggerUpdate.value
+            document.getElementById('vote-online-btn').href = data.onlineRegistration;
         } else {
             document.getElementById('vote-online-btn').style.display="none"; 
         }
@@ -27,7 +28,7 @@ triggerUpdate.addEventListener('change', (event) => {
         if (data.onlineRegistration.length > 1) {
             document.getElementById('vote-online-btn').style.display="inline";
             document.getElementById('vote-online-btn').innerText = "Register to vote online in " + event.target.value
-            
+            document.getElementById('vote-online-btn').href = data.onlineRegistration;
         } else {
             document.getElementById('vote-online-btn').style.display="none";
         }

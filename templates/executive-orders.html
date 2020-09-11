@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown =  `
+## What's an executive order?
+
+### Summary
+An executive order is an official instruction that the President of the United States issues to a federal agency. Presidents get the power to issue executive orders from Article Two of the Constitution, which says that they should use their authority to carry out the law. However, presidents sometimes also use executive orders to try to pass laws when Congress refuses to work with them.
+
+State governors can also pass executive orders, but the ones you hear about in the news almost always come from the President.
+
+### Executive orders are kind of like passing a law
+Executive orders are as powerful as the laws that Congress passes. They’re not the same as laws, since they’re only directed at federal agencies (instead of citizens). A president might order NASA to send a rocket to Mars, for example, and the agency would try to accomplish this. 
+
+Congress can pass a law that makes the executive order invalid. They can also refuse to fund it. (Most things the government does cost money, and Congress gets to decide how we spend it.)
+
+The [Supreme Court](/the-supreme-court) can also overturn an executive order that the Court thinks violates the Constitution. (This is called Judicial Review.)
+
+Today, presidents often use executive orders when Congress refuses to work with them. This often results in controversy: The president will issue an executive order, and members of Congress will respond by saying that the executive order is an abuse of power. Then there’s a lot of speculation in the news about if the President’s right or if Congress is. Sometimes the Supreme Court gets involved, too. 
+
+### A very short history of executive orders
+
+Presidents have been taking executive action since George Washington. However, it wasn’t until the twentieth century that Presidents began using executive orders regularly. For example, Washington issued 8, and Abraham Lincoln issued 48.
+
+Things changed a lot around World War 2. Franklin D. Roosevelt issued the most orders with 3,522. (He’s also the only president to be elected 4 times.) Here’s how many the most recent presidents issued over each of their 8 years in office:
+
+* Bill Clinton, 364
+* George W. Bush, 291
+* Barack Obama, 276
+* Donald Trump, 181 (as of August, 2020)**
+
+** Trump has been president for less than half the time that Clinton, Bush, and Obama were.
+
+#### Most famous executive orders
+Maybe the most famous executive order was President Lincoln’s Emancipation Proclamation in 1863, which ended slavery.
+
+In 1942 during World War 2, President Roosevelt issued an executive order that led to Japanese Americans being imprisoned in internment camps.
+
+President Harry Truman ended segregation in the military through executive order, and President Dwight Eisenhower desegregated schools. 
+
+President Bill Clinton fought a war through executive order when he sent troops into Eastern Europe.
+
+Some executive orders are carried out in secret. In 2002, President Bush secretly ordered the National Security Agency to record phone calls that U.S. citizens made. 
+`
+console.log('making converter')
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+console.log(content)
+content.innerHTML = html;
+</script>
+
+
+

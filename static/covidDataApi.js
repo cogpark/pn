@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             li.appendChild(document.createTextNode(value));
             list.appendChild(li);
         }
+        document.querySelector('.to-update').innerText = "How COVID-19 affects voting in " + triggerUpdate.value;
     })
 })
 
@@ -24,6 +25,8 @@ triggerUpdate.addEventListener('change', (event) => {
             li.appendChild(document.createTextNode(value));
             list.appendChild(li);
         }
+
+        document.querySelector('.to-update').innerText = "How COVID-19 affects voting in " + event.target.value;
     })
 });
 

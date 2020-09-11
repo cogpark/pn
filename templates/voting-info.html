@@ -151,7 +151,7 @@
             <hr />
             <div class='row'>
                 <div class='col-sm-8'>
-                <p style="font-style:italic;"> {props.selectedState} info last updated: {lookupIDInfo(props.IdData, props.selectedState, 'last_checked')}</p>
+                <p style="font-style:italic;" id='last-updated-id'> </p>
                 </div>
             </div>
             <div class='row'>
@@ -183,8 +183,8 @@
             <h3>LEARN MORE</h3> 
             <div class='row' style="padding-bottom: 10px;">
                 <div class='col-sm-6'>  
-                     <a style="font-size:18px;" class="btn btn-secondary btn-lg btn-block" 
-                     href="Get data in here">Learn more about voter ID requirements in <b>{props.selectedState}</b></a>
+                     <a style="font-size:18px;" class="btn btn-secondary btn-lg btn-block" id='learn-more-id'
+                     href=" ">Learn more about voter ID requirements</a>
                 </div>
             </div>
         </div>

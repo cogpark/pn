@@ -8,6 +8,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('#at-polls .card-body > p').innerHTML  = atPolls;
         document.querySelector('#other-options .card-body > p').innerHTML = otherOptions;
         document.querySelector('#no-id .card-body > p').innerHTML = noId;
+        document.getElementById('learn-more-id').href = data.source;
+        document.getElementById('learn-more-id').innerText = "Learn more about voter ID requirements in " + triggerUpdate.value;
+        document.getElementById('last-updated-id').innerText=triggerUpdate.value + " voter ID info last updated: " + data.last_checked;
     }) 
 })
 
@@ -20,6 +23,9 @@ triggerUpdate.addEventListener('change', (event) => {
         document.querySelector('#at-polls .card-body > p').innerHTML  = atPolls;
         document.querySelector('#other-options .card-body > p').innerHTML = otherOptions;
         document.querySelector('#no-id .card-body > p').innerHTML = noId;
+        document.getElementById('learn-more-id').href = data.source;
+        document.getElementById('learn-more-id').innerText = "Learn more about voter ID requirements in " + event.target.value;
+        document.getElementById('last-updated-id').innerText=event.target.value + " voter ID info last updated: " + data.last_checked;
     })
 });
 
