@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "index.html" %}
+{% block content %}
+
 <script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
 <div id=content-entrypoint>
     //
@@ -39,9 +41,9 @@ var converter = new showdown.Converter();
 var html = converter.makeHtml(markdown);
 
 var content = document.querySelector('#content-entrypoint');
-console.log(content)
+
 content.innerHTML = html;
 </script>
-
+{% endblock %}
 
 

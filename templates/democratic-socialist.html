@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "index.html" %}
+{% block content %}
+
 <script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
 <div id=content-entrypoint>
     //
@@ -35,14 +37,15 @@ The same goes for other key institutions that tend to shape our society, such as
 
 The DSA also has some of the same internal disagreements that major U.S. political parties do: How should it distribute resources, which candidates should it try to elect and where, and is it better to push for a national strategy or foster grassroots movements. 
 `
-console.log('making converter')
+
 var converter = new showdown.Converter();
 var html = converter.makeHtml(markdown);
 
 var content = document.querySelector('#content-entrypoint');
-console.log(content)
+
 content.innerHTML = html;
 </script>
 
+{% endblock %}
 
 

@@ -20,7 +20,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 190px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -33,6 +33,12 @@
   display: block;
 }
 
+.dropdown-content p {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
@@ -40,9 +46,12 @@
 .dropdown-container:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown-container:hover .dropbtn {background-color: #3e8e41;} 
+.dropdown-container:hover .dropbtn {background-color: #6c757d;} 
 
-.dropdown-container:hover .votebtn {background-color: #426480;}
+.votebtn:hover {
+  background-color: white;
+  color: #8C0813;
+}
 
 button.mobile-menu {
     color:white;

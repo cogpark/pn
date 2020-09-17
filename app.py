@@ -38,6 +38,14 @@ def more_amendments():
 def bill_of_rights():
     return render_template('bill-of-rights.html')
 
+@app.route('/whats-a-conservative')
+def conservative():
+    return render_template('conservative.html')
+
+@app.route('/whats-a-democrat')
+def democrat():
+    return render_template('democrat.html')
+
 @app.route('/democratic-socialist')
 def democratic_socialist():
     return render_template('democratic-socialist.html')
@@ -50,14 +58,37 @@ def electoral_college():
 def executive_order():
     return render_template('executive-order.html')
 
+@app.route('/house-of-representatives')
+def house_of_reps():
+    return render_template('house-of-representatives.html')
+
 @app.route('/just-moved-voting')
 def just_moved():
     return render_template('just-moved-voting.html')
+
+@app.route('/whats-a-liberal')
+def liberal():
+    return render_template('whats-a-liberal.html')
+
+@app.route('/whats-a-liberatarian')
+def libertarian():
+    return render_template('libertarian.html')
+
+@app.route('/whats-a-republican')
+def republican():
+    return render_template('republican.html')
 
 @app.route('/supreme-court')
 def supreme_court():
     return render_template('supreme-court.html')
 
+@app.route('/the-us-senate')
+def senate():
+    return render_template('the-us-senate.html')
+
+@app.route('/taxes')
+def what_are_taxes():
+    return render_template('taxes.html')
 
 @app.route('/api/absentee/<state>')
 def send_absentee_data(state):

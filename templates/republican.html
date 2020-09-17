@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    -
+</div>
+<script>
+const markdown = `
+# What's a Republican
+[See the current Republican Party platform (same as in 2016)]https://prod-cdn-static.gop.com/static/home/data/platform.pdf)
+
+## Quick summary
+
+The Replublican party, sometimes called the Grand Old Party or GOP, are 1 of the 2 major political parties in U.S. politics today. Republican politicians tend to be a blend of religious and economic conservatives, which means that they argue for fewer taxes, less restrictive financial regulations, and more restrictions on individual rights--particularly those that don't align with traditional Christian values. 
+
+3 things Republicans ran on in 2016:
+* Lower taxes for businesses
+* Open public lands to oil production
+* Spend less on healthcare and Social Security
+
+*Note*: In 2020, Republicans have decideed to keep the same platform as in 2016.
+
+## Republicans’ vision for the U.S.
+
+Republicans want a society characterized by limited government and Christian values. "Limited" government often amounts to reducing how much money the government takes in and spends, and how much influence it has over constituents' lives. For example, they want to get rid of rules that affect large financial corporations and banks. They want to reform--and some even want to abolish--the IRS (the government agency in charge of tax collection). They also want to reduce how much the government spends on Social Security and Medicaid.
+
+They’re also a party that thinks Christianity should have a bigger influence on U.S. government and life. For example, their platform argues that abortion violates the Fifth Amendment in the [Bill of Rights](/bill-of-rights) (that nobody should “be deprived of life, liberty or property” without fair treatment under the law). It also argues that publicly displaying the Ten Commandments is protected under the First Amendment, which protects free speech. (The Supreme Court has ruled that you can’t do this.) They also argue that the legal definition of marriage should align with their interpretation of the bible's legal definiton: 1 man and 1 woman. 
+
+## Party conflicts
+One major conflict within the Republican party is that small-government conservatives and religious conservatives don't always have the same goals. One obvious difference is that small-government conservatives want to reduce the size of government, while religious conservatives think government should act more authoratatively to influence American life. 
+
+We saw these conflicts in the 2016 election over healthcare. Small-government conservatives wanted to reduce government spending on health care, but religious conservatives (along with most moderates and Democrats) didn't agree. Then-candidate Trump ended up promising to make healthcare less expensive _and_ more expansive. As a result, a Republican-controlled Congress spent the first months of 2017 trying and failing to pass a law that made everybody happy. 
+
+President Trump himself has caused a lot of upheaval within the Republican Party. He often wants to expand government authority, and he’s not a crusader for Christianity. He's also more popular with most Republicans than the average Republican politician is, which has forced many Republican politicians to embrace his positions, even if they run counter to what they've argued in the past.
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+
+
