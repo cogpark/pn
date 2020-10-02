@@ -1,0 +1,95 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    a
+</div>
+<script>
+const markdown = `
+
+
+## The Judiciary (federal courts system)
+The Judiciary interprets the law, which includes determining if it is constitutional. If it’s not, they can strike it down
+This is quite complicated, actually; both conservatives and liberals make it part of their political strategies to get conservative or liberal judges appointed to courts. These judges will be more likely to share their interpretation of the law and to not strike down laws they feel are just. 
+Unlike the president and members of congress, judges are appointed
+This isn’t THAT weird; the executive branch (the branch that carries out our laws) is full of agencies whose officials are appointed
+Most powerful court is the supreme court, but there are also “inferior” courts, whose judgements can be overruled the Supreme Court
+The Supreme court is an appellate court, meaning it hears appealed cases--cases where the losing party wants the decision reversed
+District courts (94 of these)
+Appeals courts (13 of these)
+12 regional
+1 federal that hears (ears appeals from U.S. district and territorial courts primarily in patent and trademark cases, though it also hears appeals in cases in which the United States or its agencies is a defendant, as in alleged breaches of contract or in tax disputes. ) Located in DC
+A court of appeals hears challenges to district court decisions from courts located within its circuit, as well as appeals from decisions of federal administrative agencies
+Made up of 3 judges; not “trial” courts; just trying to determine if the trial was legit: they review the proceedings and determine if they were fair and if the law was “properly applied.” No evidence, witnesses, etc.
+All federal judges serve for life
+They can be impeached
+Has this ever happened?
+
+Bankruptcy Courts
+Federal courts have exclusive jurisdiction over bankruptcy cases involving personal, business, or farm bankruptcy. This means a bankruptcy case cannot be filed in state court. Through the bankruptcy process, individuals or businesses that can no longer pay their creditors may either seek a court-supervised liquidation of their assets, or they may reorganize their financial affairs and work out a plan to pay their debts.
+
+
+## Rights 
+“Fair trial” before a “jury of peers”
+You can’t be sent to prison without a trial--though you may be held while awaiting trial
+Protection against being tried for the same crime twice (“double jeopardy”)
+The right to a speedy trial by an impartial jury (how is this interpreted)
+The right to cross-examine witnesses, and to call witnesses to support their case
+The right to legal representation (usually a lawyer)
+The right to avoid self-incrimination (You can’t be forced to confess, either through interrogation or other means.)
+Protection from excessive bail, excessive fines, and cruel and unusual punishments (how is this interpreted)
+A guarantee that no person shall be deprived of life, liberty, or property without the due process of law (i.e. every person is guaranteed access to all the above items)
+
+Federal courts try (essentially) 2 types of cases, criminal and civil, with slightly different sets of procedures.
+
+– if you lose, you can appeal to a higher court — a federal court of appeals or state appellate court. 
+– A litigant who loses in a federal court of appeals, or in the highest court of a state, may file a petition for a “writ of certiorari,” which is a document asking the Supreme Court to review the case.
+
+
+
+## State Courts
+Determined by each state’s constitution, often there’s a state supreme court
+States also usually have courts that handle specific legal matters, e.g., probate court (wills and estates); juvenile court; family court; etc
+Judges are sometimes elected, sometimes appointed--depends on the state
+You can’t appeal state court decision in federal court unless it was made by a federal agency or your case is that the state law is unconstitutional (sometimes the Supreme Court reviews state cases)
+
+Justice System
+
+# Justice System
+### Criminal cases
+
+A criminal case is when someone is arrested for committing a crime. A prosecutor (the lawyer arguing for punishment) decides what to charge the person with. For federal crimes that are a felony or worst, prosecutors must bring those charges--including evidence and witnesses before a grand jury, a group of citizens who decide if there’s enough evidence to send the accused to trial. This is not the actual trial; it’s sort of a trial-before-the trial. 
+
+Note: State courts are not required by law to use grand juries, though some do. 
+
+If the grand jury decides that the defendant may be charged with the crime--and usually they do--then the defendant hires a lawyer or is provided with a public defender, and the case goes before a trial jury, usually at one of the district courts (if it’s a federal crime). 
+
+
+## Defendants 
+“Fair trial” before a “jury of peers”
+You can’t be sent to prison without a trial--though you may be held while awaiting trial
+Protection against being tried for the same crime twice (“double jeopardy”)
+The right to a speedy trial by an impartial jury (how is this interpreted)
+The right to cross-examine witnesses, and to call witnesses to support their case
+The right to legal representation (usually a lawyer)
+The right to avoid self-incrimination (You can’t be forced to confess, either through interrogation or other means.)
+Protection from excessive bail, excessive fines, and cruel and unusual punishments (how is this interpreted)
+A guarantee that no person shall be deprived of life, liberty, or property without the due process of law (i.e. every person is guaranteed access to all the above items)
+
+## Prosecutors
+
+## State (and other local) court systems
+
+`
+console.log('making converter')
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+console.log(content)
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
