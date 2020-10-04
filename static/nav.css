@@ -54,7 +54,38 @@
 }
 
 button.mobile-menu {
-    color:white;
-    background-color: #8C0813;
-    border: none;
+  color:white;
+  background-color: #8C0813;
+  border: none;
+  position: fixed;
+  right: 20px;
+  top: 33px;
+  z-index: 2;
+}
+
+#mobile-links {
+  display:none;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  height: 100%;
+  width: 33%;
+  background-color:lightslategrey;
+  padding:20px;
+  z-index: 1;
+}
+
+#mobile-links a {
+  color: black;
+}
+
+#mobile-links ul {
+  list-style: none;
+
+}
+
+button.mobile-menu::before {
+  content:"Menu";
+
+  
 }

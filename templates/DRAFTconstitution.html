@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+
+Written in 1787, ratified in 1788, and in operation since 1789, the United States Constitution is the world’s longest surviving written charter of government.
+
+
+
+The Constitution, originally comprising seven articles, delineates the national frame of government.
+
+Its first three articles embody the doctrine of the separation of powers, whereby the federal government is divided into three branches: the legislative, consisting of the bicameral Congress (Article I); 
+
+the executive, consisting of the president and subordinate officers (Article II); 
+
+and the judicial, consisting of the Supreme Court and other federal courts (Article III). 
+
+Article IV,
+
+Article V and
+
+Article VI embody concepts of federalism, describing the rights and responsibilities of state governments, the states in relationship to the federal government, and the shared process of constitutional amendment. Article VII establishes the procedure subsequently used by the thirteen States to ratify it. It is regarded as the oldest written and codified national constitution in force.[3]
+
+The first permanent constitution of its kind,[a] it is interpreted, supplemented, and implemented by a large body of federal constitutional law, and has influenced the constitutions of many other nations such as Australia.[12]
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+
