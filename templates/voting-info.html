@@ -28,7 +28,7 @@
         <div class="alert col">
             <h2 class="to-update">How COVID-19 affects voting in</h2> 
             <ul id="c19-entrypoint"> 
-                <script src="{{url_for('static', filename='covidDataApi.js')}}"></script>  
+                <script src="{{url_for('static', filename='covidDataApi.min.js')}}"></script>  
             </ul>    
         </div>
     </div>
@@ -39,7 +39,7 @@
     </div>
     <hr />
     <div class="row">
-        <script src="{{url_for('static', filename='regDataApi.js')}}"></script>  
+        <script src="{{url_for('static', filename='regDataApi.min.js')}}"></script>  
         <div class="col-sm-4" id="reg-in-person">
             {% with %} 
                 {% set cardTitle = "In person deadline" %}
@@ -76,7 +76,7 @@
             <hr />
         </div>
         <div class='row' style="padding-bottom:10px;">
-         <script src="{{url_for('static', filename='absenteeDataApi.js')}}"></script>  
+         <script src="{{url_for('static', filename='absenteeDataApi.min.js')}}"></script>  
             <div class='col'>
                 <h3>Instructions</h3>
             </div>
@@ -155,7 +155,7 @@
                 </div>
             </div>
             <div class='row'>
-                <script src="{{url_for('static', filename='idDataApi.js')}}"></script>  
+                <script src="{{url_for('static', filename='idDataApi.min.js')}}"></script>  
                 <div class='col-sm-8' id='at-polls'>
                     {% with %} 
                         {% set cardTitle = "Voter ID requirements in Selected state" %}

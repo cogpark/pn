@@ -29,21 +29,6 @@
     })(window,document,'script','dataLayer','GTM-W7SC747');</script>
   <!-- End Google Tag Manager -->
 
-  <script>
-    function openNav() {
-      var container = document.getElementById("mobile-links");
-
-      if (container.style.display === "block") {
-        container.style.display = "none";
-        document.querySelector('#content').style.opacity = 1;
-        document.querySelector('header').style.opacity = 1;
-      } else {
-        document.querySelector('#content').style.opacity = 0.25;
-        document.querySelector('header').style.opacity = .25;
-        container.style.display = "block";
-      }
-    }
-    </script>
 </head>
 {% include 'header.html' %}
 <body>
@@ -52,19 +37,7 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-    <div class="topnav">
-        <button href="javascript:void(0);" class="icon mobile-menu" onclick="openNav()">
-        <i class="fa fa-bars"></i>
-        </button>
-    <!-- Navigation links (hidden by default) -->
-    </div>
-    <div id="mobile-links">
-        <ul>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </div>
+   {% include 'mobile-nav.html'%}
 
     <div class='container' id="content">
         {% block content %}
@@ -73,5 +46,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </body>
    
-
 </html>
