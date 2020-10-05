@@ -105,6 +105,11 @@
     text-transform: none;
   }
 
+  #mobile-links h2 {
+    font-size: 24px;
+    color: #C5D1D9;
+  }
+
   #mobile-links li {
     text-transform: uppercase;
     color: #C5D1D9;
@@ -114,6 +119,7 @@
   #mobile-links ul {
     list-style: none;
     padding-left: 10px;
+    padding-top: 20px;
   }
 
   button.mobile-menu::before {
