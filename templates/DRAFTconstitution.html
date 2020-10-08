@@ -1,0 +1,75 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+
+(The Bill of Rights is the first 10 Amendments to the Constitution. (An amendment is an addition or change to what's laid out in the Constitution.) It was ratified in 1791, 3 years after the Constitution was.)
+
+Written in 1787, ratified in 1788, and in operation since 1789, the United States Constitution is the world’s longest surviving written charter of government.
+
+The Constitution, originally comprising seven articles, delineates the national frame of government.
+
+
+## Article 1: All legislative Powers herein granted shall be vested in a Congress of the United States
+* outlines House of Representatives and senate, as well as some of their "special powers" ("Legislative branch")
+* says each can determine the rules for how they operate
+* sets basic guidelines for how old you have to be & when congress will meet
+* Describes the process of sending bills to the President, of Impreachment, a little about taxes
+* Gives a list of things Congress as a whole may do, such as borrow money on behalf of the U.S., establish post offices, to "raise armies" and establish a navy
+* Limits ways that Congress can raise taxes
+
+Connection to today: As Congress has become more gridlocked, political parties use the powers of other branches to shape U.S. law--executive orders and the Supreme Court
+
+
+## Article 2: The executive Power shall be vested in a President of the United States of America.
+* describes how we choose a president (which has changed a great deal)
+* president is leader of the army and navy
+* president appoints people to official positions: ambassadors, supreme court judges, etc.
+* He shall from time to time give to the Congress Information of the State of the Union, and recommend to their Consideration such Measures as he shall judge necessary and expedient; <--- how outdated is THIS one??
+
+
+## Article 3: The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish
+* Describes the types of cases the Supreme Court has authority over, and what kinds of cases you can appeal to the Supreme Court (when does it have "appellate power")
+* Defines treason as going to war against the u.s. or "giving aid and comfort" to its enemies.
+
+
+## Article 4: States' powers
+* States must give "full faith and credit" to other states' laws
+* How we get new states
+* The federal government will protect states from invasion, including by other states
+
+## Article 5: The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution
+* New amendments can be added to the US Constitution with the approval by a two-thirds vote in each house of Congress (67, 281) and three-fourth vote by the states (38).
+
+
+## Article 6: This Constitution, and the Laws of the United States...shall be the supreme Law of the Land;  
+* Federal powers: The Constitution and federal laws are higher than state and local laws. All
+laws must agree with the US Constitution. 
+* All legislative and judicial branch officers are oathbound to support the constitution
+* There's no religious test for offiials
+
+
+## Article 7: How the constitution is ratified 
+* 9 states (of the 13)
+
+Constitutional Convention on September 17, 1787, Representatives from twelve out of the thirteen
+original states signed the Constitution. From September 1787 to July 1788, the states meet, talked about,
+and finally voted to approve the Constitution. 
+
+The first permanent constitution of its kind,[a] it is interpreted, supplemented, and implemented by a large body of federal constitutional law, and has influenced the constitutions of many other nations such as Australia.[12]
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+

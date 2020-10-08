@@ -1,0 +1,141 @@
+ /* Dropdown Button */
+@media only screen and (max-width: 800px) {
+  .dropbtn, .votebtn {
+    display:none;
+  }
+
+  #banner img {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+ .dropbtn, .votebtn {
+    background-color: #8C0813;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid white;
+    text-transform: uppercase;
+  }
+}
+
+  /* The container <div> - needed to position the dropdown content */
+  nav .dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content p {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
+
+  .votebtn:hover {
+    background-color: white;
+    color: #8C0813;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown-container:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown-container:hover .dropbtn {background-color: #6c757d;} 
+
+  @media only screen and (min-width: 801px) {
+    button.mobile-menu {
+      display:none;
+    }
+
+    #mobile-links ul {
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+  button.mobile-menu {
+    color:white;
+    background-color: #8C0813;
+    border: none;
+    position: absolute;
+    right: 28px;
+    top: 40px;
+    z-index: 2;
+    padding: 0px;
+  }
+
+  #mobile-links {
+    display:none;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 0px;
+    background-color: #426480;
+    padding:20px;
+    z-index: 1;
+    overflow:auto;
+  }
+
+  #mobile-links * {
+    overflow: auto;
+    line-height: 1;
+  }
+
+  #mobile-links li a {
+    color: #C5D1D9;
+    text-transform: none;
+  }
+
+  #mobile-links h2 {
+    font-size: 24px;
+    color: #C5D1D9;
+    line-height: normal;
+    overflow: auto;
+  }
+
+  #mobile-links li {
+    text-transform: uppercase;
+    color: #C5D1D9;
+    padding-left:10px;
+    line-height: normal;
+  }
+
+  #mobile-links ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: normal;
+  }
+
+  button.mobile-menu::before {
+    content:"MENU";
+    font-style: 19px;
+    vertical-align: 50%;
+  }
+}

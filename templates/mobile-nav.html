@@ -1,0 +1,69 @@
+<script>
+function openNav() {
+    var e = document.getElementById("mobile-links"),
+        t = document.querySelector("button.icon.mobile-menu");
+    "block" === e.style.display
+        ? ((e.style.display = "none"), (t.style.backgroundColor = "#8C0813"), (document.querySelector("#content").style.opacity = 1), (document.querySelector("#content").style.position = "relative") (document.querySelector("header").style.opacity = 1))
+        : ((document.querySelector("#content").style.opacity = 0.25), (document.querySelector("#content").style.position = "fixed"), (document.querySelector("header").style.opacity = 0.25), (e.style.display = "block"), (t.style.backgroundColor = "#426480"));
+}
+window.addEventListener("resize", function () {
+    (document.querySelector("button.mobile-menu").display = "none") && ((document.querySelector("#content").style.opacity = 1), (t.style.backgroundColor = "#8C0813"), (document.querySelector("#content").style.position = "relative"), (document.querySelector("header").style.opacity = 1));
+});
+
+</script>
+
+<nav>
+    <div class="topnav">
+        <button href="javascript:void(0);" class="icon mobile-menu" onclick="openNav()">
+        <i class="fa fa-bars fa-3x"></i>
+        </button>
+    <!-- Navigation links (hidden by default) -->
+    </div>
+    <div id="mobile-links">
+        
+        <ul>
+            <h2>CONTENTS</h2>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/">Voting info for every state</a></li><br/> 
+            <li><b>How voting works</b></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/electoral-college">The electoral college</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href ='/all-elections'>Elections in the U.S.</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href='/just-moved-voting'>How to vote if you just moved</a></li>
+            <li><b>Documents</b></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/bill-of-rights">Bill of Rights</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/amendments-eleven-through-twenty-seven">Amendments 11 through 27</a></li>
+            <li><b>What is/are...</b></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/executive-order">Executive orders</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/house-of-representatives">The House of Representatives</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/the-us-senate">The Senate</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/supreme-court">The Supreme Court</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/attorney-general">Attorneys General</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/taxes">Taxes</a></li>
+            <li><b>Parties/organizations</b></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/whats-a-democrat">Democrats</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/democratic-socialist">Democratic Socialists</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/whats-a-republican">Republicans</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/whats-a-liberatarian">Liberatarians</a></li>
+            <li><b>Belief systems/ideologies</b></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/whats-a-conservative">Conservative</a></li>
+            <li><i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                <a href="/whats-a-liberal">Liberal</a></li>
+        </ul>
+    </div>
+</nav>

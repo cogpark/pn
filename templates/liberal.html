@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+## What's a "liberal"?
+
+People use liberal to mean 2 different things. In casual conversation, people sometimes just mean, “someone who votes for progressive candidates (usually Democrats).” But “liberal” also refers to a couple-hundred-years-old philosophical tradition, which doesn’t always align with the Democratic party.
+
+Sometimes you’ll hear people say, “I’m socially liberal and fiscally conservative.” What they mean is, “I agree with Democrats on social issues, but I agree with Republicans on economic issues.” However, if they were referring to “liberal” as a philosophy, they could also say, “I’m socially and fiscally liberal” and pretty much mean the same thing. Confused? Let’s try to clear things up. 
+
+## Liberalism the philosophy
+Let’s start with the philosophy, since it’ll help us see where the word “liberal” came from. “Liberalism” is a several-hundred-year-old philosophy that formed the foundation of democracy as we know it. If you had to sum it up one phrase, you could get away with, “people who wanted to replace absolute rulers (such as a king or queen) with more democratic forms of government.”  
+
+Liberals wanted separation of church and government, more people to be able to vote, a wider distribution of money, and a constitution acknowledging that all men had “natural rights.” (And yes, they often meant just “men,” and they also mostly meant “white men.”) They instigated a mess of revolutions across Europe, South America, the islands in the Caribbean, and in the U.S. that replaced monarchies with democracies, or at least more democratic governments. 
+
+## “Someone who votes for progressive candidates (usually Democrats)”
+In casual conversation, “liberal” mostly means somebody who votes for progressive, left-leaning candidates. (This might not clear things up if you’re not sure what progressive or left-leaning mean, but bear with us.) Since most progressive candidates in the U.S. run as Democrats, liberal is often a synonym for Democrats. 
+
+Democrats do take positions on social issues that square with the liberal philosophical tradition. Issues like gay marriage, the ability to worship whatever God/gods you want, and expanded voting rights all make society more democratic. 
+
+However, on economic issues, today’s progressives aren’t always in line with traditional liberalism. Today’s liberal politicians call for government to help solve social problems. Providing healthcare to people who can’t afford it (Medicaid)  and making sure citizens can afford to buy food (food stamps/SNAP benefits) are liberal positions. Today’s liberals also often argue that people need to be protected from big companies who seek profit at all costs, and government regulation offers that kind of protection.
+
+This runs totally counter to “traditional” liberal economic views. Arguments for government to regulate companies or for raising taxes is exactly what liberal philosophers would’ve argued against in the 17th and 18th centuries. Economic liberalism is probably better represented in today’s libertarians, who generally want the government to be less involved in all parts of life. 
+
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+

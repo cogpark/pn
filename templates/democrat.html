@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+## WHAT'S A DEMOCRAT
+
+[See the 2020 official Democratic Party platform](https://www.demconvention.com/wp-content/uploads/2020/07/2020-07-21-DRAFT-Democratic-Party-Platform.pdf)
+
+### Quick summary
+
+1 of the 2 major political parties in U.S. politics today. Democratic politicians tend to be [liberal](/whats-a-liberal). Democrats today generally think that government should play a role in solving our society's biggest problems, though they also think government shouldn't regulate sexuality or individual identity. 
+
+3 things Democrats are running on in 2020:
+* Environmental and climate justice, combat climate change
+* Raising wages for workers
+* Universal healthcare
+
+### Democrats’ vision for the U.S.
+
+Democrats want a society where everybody has access to a decent standard of living. In general, they think that government has a role to play in providing people in the U.S. with access to food, resources, shelter, work, healthcare, and education. 
+
+For example, Democrats have created programs making sure that people have enough to eat (food stamps/SNAP benefits) and access to healthcare (Medicaid). They created Social Security, a program inded to make sure that you have enough to get by after you’re too old to work. They want to spend more on education, healthcare, and mental healthcare. They want to increases taxes on the ultra rich and use that money to fund the programs listed above.
+
+Democrats also believe that the government should protect individuals’ rights to their bodies and identities. For example, Democrats defend a women’s right to choose if she wants to have an abortion. They’ve also fought to expand the rights of people who are gay or lesbian (the right to get married, for example, or to adopt). 
+
+Finally, Democrats frequently try to pass laws that reign in potentially harmful behavior by private companies. [The Glass-Steagal Act](https://www.federalreservehistory.org/essays/glass_steagall_act) is a good example of this sort of law. 
+
+### Party conflicts
+Democrats today disagree over what their message (or messages) should be, and who they should try to convince to vote for them. For example, Democrats very much need Black Americans to vote for them to win elections. However, the U.S. is still a majority White country. An ongoing tension within the party is whether to appeal primarily to Black voters, rural White voters, or to craft a message that works for both. 
+
+Democrats also disagree over how aggressively government should push for social change. More progressive Democrats want government to do more to make sure every American has access to a decent standard of living: They want to pass laws that more evenly distribute money, for example, or more fully fund existing programs. More moderate Democrats believe that while government has a role to play, it should also empower private companies and citizens to solve these issues.
+
+For example: right now, many progressive Democrats want the government to provide health insurance for everyone in the U.S. They argue that we should see healthcare as a basic human right, and that the for-profit health insurance industry has made it too expensive for many people to see doctors and go to hospitals. 
+
+By comparison, more moderate democrats argue for a "public option," which is a little like "public schools"; just as every kid in the U.S. can go to public school, every person in the U.S. would have access to an affordable health insurance plan. However, people who want to pay more would still be able to purchase private insurance, just as you can pay to send your kids to private schools.
+
+As further contrast, Republicans often argue that people who want health insurance should purchase it from private companies, and that the government should spend less on healthcare-related programs, such as Medicare and Medicaid. They tend to reason that health insurance would cost us too much (i.e. in taxes), and that the private sector does a better job of providing it. 
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+

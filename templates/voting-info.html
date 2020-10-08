@@ -1,0 +1,194 @@
+{% extends "index.html" %}
+{% block content %}
+
+<main>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>SELECT A STATE:</p>
+            <select name = pick-state  
+            value="Alabama"
+            class="form-control"
+            > 
+            {% for item in us_states %}
+            <option value= "{{ item }}">{{ item }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-5" >
+            <p>SELECT AN ELECTION:</p>
+            <select name = pick-election  
+            value="General (2020)"
+            class="form-control"
+            disabled> 
+                <option value=2020>2020 (general)</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert col">
+            <h2 class="to-update">How COVID-19 affects voting in</h2> 
+            <ul id="c19-entrypoint"> 
+                <script src="{{url_for('static', filename='covidDataApi.min.js')}}"></script>  
+            </ul>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <h2>Registration deadlines</h2>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <script src="{{url_for('static', filename='regDataApi.min.js')}}"></script>  
+        <div class="col-sm-4" id="reg-in-person">
+            {% with %} 
+                {% set cardTitle = "In person deadline" %}
+                {% include "scorecard.html" %} 
+            {% endwith %}
+        </div> 
+        <div class="col-sm-4 middle-card" id="reg-by-mail">
+            {% with cardTitle="By mail deadline" %}
+                {% include "scorecard.html"  %} 
+            {% endwith %}
+        </div>
+        <div class="col-sm-4" id="reg-online">
+            {% with cardTitle="Online deadline" %}
+                {% include "scorecard.html"  %} 
+            {% endwith %}   
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-sm-5'>
+            <a style="display:none;" id="vote-online-btn" class="btn btn-secondary btn-lg btn-block" href=''>Register to vote</a>
+        </div>
+    </div>
+    <div class="row padded-down" id="absentee-row">
+        <div class='col'>
+            <div class='col-sm-10'>
+                <h2>Early & absentee voting</h2>
+            </div>
+        <div class='row' style="padding-bottom:10px;">
+            <div class='col-sm-8'>
+                <p class='explainer'>In most states, you can vote before Election Day. Sometimes this is called "early" voting, and sometimes
+                it's "absentee." Early means the state counts your vote before the election, absentee means they count it after.
+                Some states also require an excuse to vote before Election Day.</p>
+            </div>
+            <hr />
+        </div>
+        <div class='row' style="padding-bottom:10px;">
+         <script src="{{url_for('static', filename='absenteeDataApi.min.js')}}"></script>  
+            <div class='col'>
+                <h3>Instructions</h3>
+            </div>
+        </div>
+        <div class='row' style="padding-bottom:10px;">
+            <div class='col-sm-6' id='ab-mail-instructions'>
+            {% with cardTitle="Mail instructions" %}
+                {% set slug = "absentee" %}
+                {% include "scorecard.html"  %} 
+            {% endwith %} 
+            </div>
+            <div class='col-sm-6' id='ab-person-instructions'>
+                {% with cardTitle="In person instructions" %}
+                {% set slug = "absentee" %}
+                {% include "scorecard.html"  %} 
+            {% endwith %} 
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-8'>
+                <h3>Deadlines & requirements</h3>
+            </div>
+        </div> 
+        <div class='row'  style="padding-bottom:10px;">
+            <div class='col-sm-4' id='deadline-mail-request' >
+                {% with %} 
+                    {% set cardTitle = "Deadline: Mail ballot requests" %}
+                    {% set slug = "absentee" %}
+                    {% include "scorecard.html" %} 
+                {% endwith %}
+            </div>
+            <div class='col-sm-4' id='deadline-ballot-submissions'>
+                {% with %} 
+                    {% set cardTitle = "Deadline: Ballot submissions" %}
+                    {% set slug = "absentee" %}
+                    {% include "scorecard.html" %} 
+                {% endwith %}
+            </div>
+            <div class ='col-sm-4' id='ab-requirements'>
+                {% with %} 
+                    {% set cardTitle = "Requirements" %}
+                    {% set slug = "absentee" %}
+                    {% include "scorecard.html" %} 
+                {% endwith %}   
+            </div>
+        </div>
+        <br />   
+        <div class='row' style="padding-bottom:10px;">
+            <div class= 'col-sm-12'>
+                <h3>Learn more</h3>
+            </div>
+            <div class='col-sm-6'>
+                <a class="btn btn-secondary btn-lg btn-block" id='learn-more' 
+                href="">Learn more about voting early/absentee in <b>AND HERE</b></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row" id="id-requirements-row">
+        <div class="col">
+            <div class='row'>
+                <div class='col-sm-10'>
+                    <h2>Voter ID requirements</h2>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8'>
+                    <p class='explainer'>Most states require some form of ID at the polls. 
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class='row'>
+                <div class='col-sm-8'>
+                <p style="font-style:italic;" id='last-updated-id'> </p>
+                </div>
+            </div>
+            <div class='row'>
+                <script src="{{url_for('static', filename='idDataApi.min.js')}}"></script>  
+                <div class='col-sm-8' id='at-polls'>
+                    {% with %} 
+                        {% set cardTitle = "Voter ID requirements in Selected state" %}
+                        {% set slug = "id" %}
+                        {% include "scorecard.html" %} 
+                    {% endwith %}
+                </div>
+                <div class='col-sm-4' id='other-options'>
+                    {% with %} 
+                        {% set cardTitle = "Other ID options" %}
+                        {% set slug = "id" %}
+                        {% include "scorecard.html" %} 
+                    {% endwith %}
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-8' id='no-id'>
+                    {% with %} 
+                        {% set cardTitle = "Can't show ID?" %}
+                        {% set slug = "id" %}
+                        {% include "scorecard.html" %} 
+                    {% endwith %}
+                </div>
+            </div>
+            <h3>LEARN MORE</h3> 
+            <div class='row' style="padding-bottom: 10px;">
+                <div class='col-sm-6'>  
+                     <a style="font-size:18px;" class="btn btn-secondary btn-lg btn-block" id='learn-more-id'
+                     href=" ">Learn more about voter ID requirements</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

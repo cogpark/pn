@@ -1,0 +1,10 @@
+venv/
+todo.txt
+__pycache__/
+pn.zip
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebextensions/
+

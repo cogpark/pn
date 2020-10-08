@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+# What are attorneys general and what do they do?
+
+## What is an attorney general? 
+The attorney general is the highest-ranking lawyer in U.S. government. All U.S. state and territory governments also have attorneys general (and yes, _attorneys_ general is how you pluralize it). While the responsibility of an attorney general differs from state to state and from state to federal, in general, they provide legal advice to high-ranking government officials and represent their state (or the country) in legal issues.
+
+## What does the U.S. attorney general do?
+The U.S. attorney general (AG) is part of the president's cabinet and oversees the Department of Justice. The AG provides legal advice, formal and informal recommendations, to the president, the president's cabinet, the heads of government agencies, and and others in the U.S. government. This may mean helping the president shape an [executive order]('/executive-order') so that it's unlikely to be rejected by the [Supeme Court]('/supreme-court') in judicial review. They may also voice official legal opinions that can have significant consequences for U.S. law. For example, in 2011, President Obama's attorney general, Eric Holder, recommended to the president that the Defense of Marriage Act](https://www.justice.gov/opa/pr/letter-attorney-general-congress-litigation-involving-defense-marriage-act), which allowed states to ban same-sex marriage, wasn't constitutional. As a result, the Obama Administration no longer officially opposed gay marriage. 
+
+Interestingly, while the AG officially represents the U.S. in legal matters, this doesn't usually mean arguing cases in court. For example, when someone represents the U.S. in front of the Supreme Court, [it's usually the solicitor general]('https://www.naag.org/publications/nagtri-journal/volume-2-issue-4/who-argues-for-the-states-in-the-u.s.-supreme-court.php'), a lower-ranking Justice Department lawyer, and not the attorney general. In lower courts, it's usually a U.S. attorney. 
+
+The other main responsibility of the U.S. attorney general is _administrative_: As head of the Justice Department, they organize and run a huge piece of the government. The Justice Deparment is the "parent" organization of many other agencies, such as the FBI, Drug Enforcement Administration, the U.S. Attorneys and U.S. Marshals Service, and many more. This aspect of their job is less likely to make the news, except for in extraordinary circumstances, as when President Bill Clinton's AG, Janet Reno, okayed [an FBI plan to tear gas a compound where the Branch Dividian cult lived](https://www.pbs.org/wgbh/frontline/article/10-things-you-may-not-know-about-waco/).
+
+## What do state/U.S. territory attorneys general do?
+While the responsibilities of state-level attorneys general differ depending on the state, a things they have in common include:
+* They are the top legal official in their state or territory 
+* They advise and represent the state and state agencies on legal matters
+* They oversee large organizations of lawyers and investigators
+* Their office represents "The People" in criminal cases. This includes suing other states and the U.S. government on behalf of the people of their state or territory. 
+
+43 states, 2 territories, and Washington D.C. elect their attorneys general by popular vote. The governor appoints an AG in Alaska, Hawaii, New Hampshire, New Jersey, Wyoming, American Samoa, Puerto Rico and the Virgin Islands. In Maine, the state legislature picks the attorney general, and in Tennesee, the state Supreme Court does. 
+
+You might care what your state's attorney general is doing, as their political stances often determine how they spend their resources. (Their resources come from taxes you pay.) For example, as I write this, a number of conservative attorneys general are working to [bring down the Affordable Care Act (Obamacare)](https://www.brookings.edu/blog/usc-brookings-schaeffer-on-health-policy/2019/09/18/map-where-does-your-state-stand-in-texas-v-u-s/). Similarly, 18 liberal attorneys general have joined forces to [shut down the Dakota Access (oil) Pipeline](https://www.law.nyu.edu/centers/state-impact/press-publications/press-releases/dakota-access-amicus-brief). While these are unusually large, high-profile cases, they might give you an example of how your attorney general's politics shape which cases they choose to pursue.
+
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+
