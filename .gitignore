@@ -1,10 +1,16 @@
 venv/
 todo.txt
 __pycache__/
+<<<<<<< HEAD
 pn.zip
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 .ebextensions/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3

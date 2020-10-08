@@ -80,7 +80,11 @@
     color:white;
     background-color: #8C0813;
     border: none;
+<<<<<<< HEAD
     position: absolute;
+=======
+    position: fixed;
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
     right: 28px;
     top: 40px;
     z-index: 2;
@@ -92,21 +96,30 @@
     position: fixed;
     right: 10px;
     top: 10px;
+<<<<<<< HEAD
     height: 100vh;
     overflow-y: scroll;
     width: 100%;
     margin: 0px;
     background-color: #426480;
+=======
+    height: 100%;
+    width: 85%;
+    background-color:#426480;
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
     padding:20px;
     z-index: 1;
     overflow:auto;
   }
 
+<<<<<<< HEAD
   #mobile-links * {
     overflow: auto;
     line-height: 1;
   }
 
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
   #mobile-links li a {
     color: #C5D1D9;
     text-transform: none;
@@ -115,22 +128,31 @@
   #mobile-links h2 {
     font-size: 24px;
     color: #C5D1D9;
+<<<<<<< HEAD
     line-height: normal;
     overflow: auto;
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
   }
 
   #mobile-links li {
     text-transform: uppercase;
     color: #C5D1D9;
     padding-left:10px;
+<<<<<<< HEAD
     line-height: normal;
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
   }
 
   #mobile-links ul {
     list-style: none;
     padding-left: 10px;
     padding-top: 20px;
+<<<<<<< HEAD
     line-height: normal;
+=======
+>>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
   }
 
   button.mobile-menu::before {

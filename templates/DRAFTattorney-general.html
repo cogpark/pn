@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    //
+</div>
+<script>
+const markdown = `
+## What as an attorney general? 
+The attorney general is the highest-ranking lawyer in U.S. government. All U.S. states and territories also have their own attorneys general (and yes, that's how you pluralize it). Responsibilties differ from state to state, and between federal and state levels. 
+
+## What does the U.S. attorney general do?
+The attorney general oversees the Department of Justice and is part of the president's cabinet. The attorney general represent the United States in legal matters, which mostly means making formal and informal recommendations to the president, the president's cabinet, the heads of government agencies, and and others in the U.S. government. This may mean helping the president shape an [executive order]('/executive-order') so that it's unlikely to be rejected by the [Supeme Court]('/supreme-court') in judicial review. 
+
+While attorneys general are legally allowed to argue in cases in court, in practice, they usually don't. When someone represents the U.S. in front of the Supreme Court, [it's usually the solicitor general]('https://www.naag.org/publications/nagtri-journal/volume-2-issue-4/who-argues-for-the-states-in-the-u.s.-supreme-court.php'), a lower-ranking Justice Department lawyer, and not the attorney general. In lower courts, it's usually a U.S. attorney. 
+
+The other main (and today, perhaps primary) responsibility of the U.S. attorney general is _administrative_: As head of the Justice Department, they organize and run a huge piece of the government. The Justice Deparment is the "parent" organization of many other agencies, such as the FDI, Drug Enforcement Administration, the U.S. Attorneys and U.S. Marshals Service, and many more. When the attorney general is in the news today, it is often in relationship to some Justice Department policy they've created.
+
+## What do state/U.S. territory attorneys general do?
+While the responsibilities of state-level attorneys general differ depending on the state, a few general similarities include:
+* They are the top legal official in their state or territory 
+* They advise and represent the state and state agencies on legal matters
+* They oversee large organizations of lawyers and investigators
+* This office represents "The People" (of the state) in criminal cases. This includes suing other states and the U.S. government on behalf of the people of their state. 
+
+43 states, 2 territories, and Washington D.C. elect their attorney general by popular vote. However, the governor appoints an attorney general in Alaska, Hawaii, New Hampshire, New Jersey, Wyoming, American Samoa, Puerto Rico and the Virgin Islands. In Maine, the state legislature picks the attorney general, and in Tennesee, the state Supreme Court does. 
+
+You might care what your state's attorney general is doing, as their political stances often determine how they spend their resources. (Their resources come from taxes you pay.) For example, as I write this, a number of conservative attorneys general are working to [bring down the Affordable Care Act (Obamacare)](https://www.brookings.edu/blog/usc-brookings-schaeffer-on-health-policy/2019/09/18/map-where-does-your-state-stand-in-texas-v-u-s/). Similarly, 18 liberal attorneys general have joined forces to [shut down the Dakota Access (oil) Pipeline](https://www.law.nyu.edu/centers/state-impact/press-publications/press-releases/dakota-access-amicus-brief). While these are unusually large, high-profile cases, they might give you an example of how your attorney general's politics shape which cases they choose to pursue.
+
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+
+
