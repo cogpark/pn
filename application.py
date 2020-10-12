@@ -22,22 +22,15 @@ def index():
    
     return render_template('voting-info.html', us_states=us_states)
 
-<<<<<<< HEAD
 @application.route('/attorney-general')
 def attorney_general():
     return render_template('attorney-general.html')
 
-=======
->>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
 @application.route('/all-elections')
 def all_elections():
     return render_template('all-elections.html')
 
-<<<<<<< HEAD
 @application.route('/amendments-eleven-through-twenty-seven')
-=======
-@application.route('/amendments-eleven-through-twenty-six')
->>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
 def more_amendments():
     return render_template('more-amendments.html')
 
@@ -63,11 +56,7 @@ def electoral_college():
 
 @application.route('/executive-order')
 def executive_order():
-<<<<<<< HEAD
     return render_template('executive-orders.html')
-=======
-    return render_template('executive-order.html')
->>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
 
 @application.route('/house-of-representatives')
 def house_of_reps():
@@ -77,13 +66,13 @@ def house_of_reps():
 def just_moved():
     return render_template('just-moved-voting.html')
 
+@application.route('/left-right-political-spectrum')
+def political_spectrum():
+    return render_template('left-right-political-spectrum.html')
+
 @application.route('/whats-a-liberal')
 def liberal():
-<<<<<<< HEAD
     return render_template('liberal.html')
-=======
-    return render_template('whats-a-liberal.html')
->>>>>>> 00ee5232833c6b17a82e2617f8418a7cf4c1c8f3
 
 @application.route('/whats-a-liberatarian')
 def libertarian():
