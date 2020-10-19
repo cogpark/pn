@@ -8,10 +8,11 @@
         <meta name="author" content="Adam Cogbill"/>
         <meta name="keywords" content="voter registration, registration deadlines, voter ID, voter ID requirements, vote by mail" />
         <meta name="referrer" content="origin"/>
-        <meta
-        name="description"
-        content="We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting."
-        />
+{% block metadata %}
+    {% for key, value in metadata.items() %}
+        <meta name="{{ key }}" content="{{ value }}"/>
+    {% endfor %}
+{% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">

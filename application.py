@@ -19,40 +19,50 @@ def index():
         'Virginia','Washington', 'Washington, D.C.',
         'West Virginia','Wisconsin',
         'Wyoming']
-   
-    return render_template('voting-info.html', us_states=us_states)
+
+    metadata = {"description": "We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting.","title": "Voting information for all U.S. states"}   
+    return render_template('voting-info.html', us_states=us_states, metadata=metadata)
 
 @application.route('/attorney-general')
 def attorney_general():
-    return render_template('attorney-general.html')
+    metadata = {'description': "The attorney general is part of the president's cabinet and oversees the Department of Justice.", "title":"What are attorneys general and what do they do?"}
+
+    return render_template('attorney-general.html', metadata=metadata)
 
 @application.route('/all-elections')
 def all_elections():
-    return render_template('all-elections.html')
+    metadata = {'description': "There are a lot of elections in U.S. politics--primaries and generals and midterms and specials and more", "title":"What are all the elections & what are they for?"}
+    return render_template('all-elections.html', metadata=metadata)
 
 @application.route('/amendments-eleven-through-twenty-seven')
 def more_amendments():
-    return render_template('more-amendments.html')
+    metadata = {'description': "What Amendments 11 through 27 say: Changes to the courts, electoral college, and civil rights.", "title":"Amendments 11 through 27"}
+    return render_template('more-amendments.html', metadata=metadata)
 
 @application.route('/bill-of-rights')
 def bill_of_rights():
-    return render_template('bill-of-rights.html')
+    metadata = {'description': "The Bill of Rights is the first 10 amendments to the Constitution. It was written by James Madison and ratified in 1791, 3 years after the Constitution was.", "title":"The Bill of Rights"}
+    return render_template('bill-of-rights.html', metadata=metadata)
 
 @application.route('/whats-a-conservative')
 def conservative():
-    return render_template('conservative.html')
+    metadata = {"description": "Conservatives believe Christian values should shape society and that government should be limited.", "title": "What is a conservative?"}
+    return render_template('conservative.html', metadata=metadata)
 
 @application.route('/whats-a-democrat')
 def democrat():
-    return render_template('democrat.html')
+    metadata = {"description":"Democrats think government should solve social problems and shouldn't regulate sexuality or individual identity.", "title":"What is a Democrat?"}
+    return render_template('democrat.html', metadata=metadata)
 
 @application.route('/democratic-socialist')
 def democratic_socialist():
-    return render_template('democratic-socialist.html')
+    metadata = {"description":"Democratic Socialists think government should serve the public good and they want to get rid capitalism.", "title":"What is a Democratic Socialist?"}
+    return render_template('democratic-socialist.html', metadata=metadata)
 
 @application.route('/electoral-college')
 def electoral_college():
-    return render_template('electoral-college.html')
+    metadata = {"description": "The electoral college is an indirect voting system. Voters vote for electors who then vote for president. There are 538 electors.", "title":"The electoral college"}
+    return render_template('electoral-college.html', metadata=metadata)
 
 @application.route('/executive-order')
 def executive_order():
