@@ -20,7 +20,7 @@ def index():
         'West Virginia','Wisconsin',
         'Wyoming']
 
-    metadata = {"description": "We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting.","title": "Voting information for all U.S. states"}   
+    metadata = {"description": "We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting.","title": "Voting information for all U.S. states", "keywords":"voter registration, registration deadlines, voter ID, voter ID requirements, vote by mail"}   
     return render_template('voting-info.html', us_states=us_states, metadata=metadata)
 
 @application.route('/attorney-general')
@@ -49,6 +49,11 @@ def conservative():
     metadata = {"description": "Conservatives believe Christian values should shape society and that government should be limited.", "title": "What is a conservative?"}
     return render_template('conservative.html', metadata=metadata)
 
+@application.route('/constitution-united-states')
+def constitution():
+    metadata = {"description": "The Constitution was written in 1787 and ratified in 1788. It lays out a structure for our government.", "title": "The Constitution of the United States", "keywords":"constitution, U.S. government, founding document, constitution ratified"}
+    return render_template('constitution.html', metadata=metadata)
+
 @application.route('/whats-a-democrat')
 def democrat():
     metadata = {"description":"Democrats think government should solve social problems and shouldn't regulate sexuality or individual identity.", "title":"What is a Democrat?"}
@@ -66,43 +71,53 @@ def electoral_college():
 
 @application.route('/executive-order')
 def executive_order():
-    return render_template('executive-orders.html')
+    metadata = {"description": "An executive order is an official instruction that the President of the United States issues to a federal agency.", "title":"What is an executive order?"}
+    return render_template('executive-orders.html', metadata=metadata)
 
 @application.route('/house-of-representatives')
 def house_of_reps():
-    return render_template('house-of-representatives.html')
+    metadata = {"description":"The House of Representatives is a group of 435 elected political leaders who make and approve new laws. The House and Senate together make up the U.S. Congress.", "title":"The House of Representatives of the United States"}
+    return render_template('house-of-representatives.html', metadata=metadata)
 
 @application.route('/just-moved-voting')
 def just_moved():
-    return render_template('just-moved-voting.html')
+    metadata = {"description":"If you've just moved, here are the steps to take to figure out how to register and vote your new state.", "title":"How to register & vote if you just moved"}
+    return render_template('just-moved-voting.html', metadata=metadata)
 
 @application.route('/left-right-political-spectrum')
 def political_spectrum():
-    return render_template('left-right-political-spectrum.html')
+    metadata = {"description": "Left-wing and right-wing are opposing political perspectives. Right-wing ideas are more conservativ and leftist ideas being more progressive or liberal.", "title": "What left and right mean in U.S. politics"}
+    return render_template('left-right-political-spectrum.html', metadata=metadata)
 
 @application.route('/whats-a-liberal')
 def liberal():
-    return render_template('liberal.html')
+    metadata = {"description":"Liberal means progressive, but also refers to long philosophical tradition that doesn’t always align with the Democratic party.", "title":"What does liberal mean (in U.S. politics)"}
+    return render_template('liberal.html', metadata=metadata)
 
 @application.route('/whats-a-liberatarian')
 def libertarian():
-    return render_template('libertarian.html')
+    metadata = {"description":"The Libertarian party was formed in 1971 believes that government should have as small a role as possible in our lives", "title":"What's a Libertarian"}
+    return render_template('libertarian.html', metadata=metadata)
 
 @application.route('/whats-a-republican')
 def republican():
-    return render_template('republican.html')
+    metadata = {"description":"The Replublican party, sometimes called the Grand Old Party or GOP, is 1 of the 2 major political parties in U.S. politics today.", "title":"What's a Republican"}
+    return render_template('republican.html', metadata=metadata)
 
 @application.route('/supreme-court')
 def supreme_court():
-    return render_template('supreme-court.html')
+    metadata = {"description":"The Supreme Court is the most authoritative court U.S. It consists of 9 Justices whose combined judgment is a key part of how our government works.", "title":"The Supreme Court of the United States"}
+    return render_template('supreme-court.html', metadata=metadata)
 
 @application.route('/the-us-senate')
 def senate():
-    return render_template('the-us-senate.html')
+    metadata = {"description":"The Senate is 100 elected political leaders who make and approve new laws. The Senate and the House of Representatives make up the Congress.", "title":"The Senate of the United States"}
+    return render_template('the-us-senate.html', metadata=metadata)
 
 @application.route('/taxes')
 def what_are_taxes():
-    return render_template('taxes.html')
+    metadata = {"description":"Taxes are money you pay to your federa, state, and local governments. Governments then use this money to fund services.", "title":"What are taxes?"}
+    return render_template('taxes.html', metadata=metadata)
 
 @application.route('/api/absentee/<state>')
 def send_absentee_data(state):

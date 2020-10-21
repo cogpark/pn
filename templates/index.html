@@ -6,13 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Adam Cogbill"/>
-        <meta name="keywords" content="voter registration, registration deadlines, voter ID, voter ID requirements, vote by mail" />
-        <meta name="referrer" content="origin"/>
-{% block metadata %}
-    {% for key, value in metadata.items() %}
-        <meta name="{{ key }}" content="{{ value }}"/>
-    {% endfor %}
-{% endblock %}
+        <meta name="referrer" content="origin"/>{% block metadata %}{% for key, value in metadata.items() %}
+        <meta name="{{ key }}" content="{{ value }}"/>{% endfor %}{% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
