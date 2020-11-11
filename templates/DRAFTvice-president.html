@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    a
+</div>
+<script>
+const markdown = `
+
+# What's the vice president's role in the U.S. government?
+
+## Summary
+The quick version of the vice president's role is that:
+* They become president if the current president dies or leaves office
+* They oversee [the Senate](/the-us-senate), and cast tie-breaking votes
+
+That's pretty much all that [the Constitution](/constitution-united-states) says. However, it's been more than 200 years since the Constitution was written. Today, the vice president plays a much larger _executive_ role (i.e. a larger role in running the government) and a much smaller role in the Senate (i.e. in making laws).
+
+## The vice president's role in the executive branch
+As you probably know, the vice president is next-in-line to be president if the president leaves office. However, in today's United States government, the vice president is also an advisor to the president, attends cabinet meetings(https://en.wikipedia.org/wiki/Cabinet_of_the_United_States), sits on the [National Security Council](https://www.whitehouse.gov/nsc/), and takes a leading role in certain government projects. In 2020, Vice President Pence was put in charge of a Coronavirus Task Force. In 2009, then-VP [played a key role in 2009 in getting a major stimulus bill through Congress](https://www.npr.org/2020/04/06/828303824/a-look-back-at-how-joe-biden-managed-the-2009-stimulus-package).
+
+Originally (200 years ago), the vice president was just whoever got the second-most votes in the presidential election. However, it turns out that because political parties are such powerful forces in our politics, this doesn't work so well. Today, vice presidents are aimportant figures within their political parties. 
+
+They are often selected because political strategists believe that something about them will make more voters support a presidential candidate. For instance, Vice President Pence was picked in part because he's an evangelical Christian, and Republican strategists hoped this would help get more evangelical Christians to vote for Donald Trump. Similarly, this year, one reason Democrats nominated Kamala Harris as Joe Biden's vice president is because she's a person of color, and so are a huge segment of the people who vote for Democratic candidates.
+
+### Vice presidents who have become president
+9 vice presidents have taken over as president since the Constitution was ratified. Here's a list.
+
+* John Tyler (after William Henry Harrison died in office in 1841)
+* Millard Fillmore (after Zachaery Tayler died in office in 1850)
+* Andrew Johnson (after Abraham Lincoln was assassinated in 1865)
+* Chester Arthur (after James Garfield was assassinated in 1881)
+* Theodore Roosevelt (after William McKinley was assassinated in 1901)
+* Calvin Coolidge (after Warren Harding died in office in 1923)
+* Harry Truman (after Franklin Roosevelt died in 1945)
+* Lyndon Johnson (after John F. Kennedy was assassinated in 1963)
+* Gerald Ford (after Richard Nixon resigned in 1974) 
+
+
+## The vice president's role in the legislative branch (in the senate)
+Today, the vice president rarely participates in senate proceedings, except to cast a tie-breaking vote. They certainly don't act, as the constitution imagined, as the "presiding office" of the senate, which is _supposed_ to mean: make sure senators follow the official rules, determine who speaks, generally maintain order, etc.
+
+Today, the "presiding" role is played by a senator and is called the "president pro tempore." And the person who _really_ runs the senate is actually the Majority Leader. (I write more about this in [the piece about the Senate](/the-us-senate).)
+
+
+## Vice president's salary
+The vice president's salary $235,100 per year. For context, this is a lot more than the average salary for a nurse ($70,000) or an electrician ($55,190), but less than a specialist doctor ($258,000) and a lot less than a CEO ($822,000).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* 
+
+
+`
+console.log('making converter')
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+console.log(content)
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,82 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    a
+</div>
+<script>
+const markdown = `
+
+# How does the U.S. Court System work?
+
+
+
+
+
+
+
+
+
+Justice System
+
+# Justice System
+### Criminal cases
+
+
+
+### How trials work in federal courts
+Federal courts try 2 types of cases, criminal and civil. A criminal case is when someone is accused of breaking the law, and a civil case is a disagreement between people or organizations that needs to be settled in court. 
+
+ with slightly different sets of procedures.
+
+– if you lose, you can appeal to a higher court — a federal court of appeals or state appellate court. 
+– A litigant who loses in a federal court of appeals, or in the highest court of a state, may file a petition for a “writ of certiorari,” which is a document asking the Supreme Court to review the case.
+
+So, if you were on trial for a federal crime, your case would begin in a District Court. If you lost, you might make an appeal to one of the Appeals Courts. Appeals Courts don't "re-try" your case; they just determine if your original trial was legit. They're made up of 3 judges who review the proceedings and decide if the law was correctly intepreted. There's no evidence presented, witnesses, etc. If you don't like the decision they reach, you can then appeal to the Supreme Court, which is a panel of (usually) 9 justices whose ruling is final.
+
+## Rights 
+“Fair trial” before a “jury of peers”
+You can’t be sent to prison without a trial--though you may be held while awaiting trial
+Protection against being tried for the same crime twice (“double jeopardy”)
+The right to a speedy trial by an impartial jury (how is this interpreted)
+The right to cross-examine witnesses, and to call witnesses to support their case
+The right to legal representation (usually a lawyer)
+The right to avoid self-incrimination (You can’t be forced to confess, either through interrogation or other means.)
+Protection from excessive bail, excessive fines, and cruel and unusual punishments (how is this interpreted)
+A guarantee that no person shall be deprived of life, liberty, or property without the due process of law (i.e. every person is guaranteed access to all the above items)
+
+
+A criminal case is when someone is arrested for committing a crime. A prosecutor (the lawyer arguing for punishment) decides what to charge the person with. For federal crimes that are a felony or worst, prosecutors must bring those charges--including evidence and witnesses before a grand jury, a group of citizens who decide if there’s enough evidence to send the accused to trial. This is not the actual trial; it’s sort of a trial-before-the trial. 
+
+Note: State courts are not required by law to use grand juries, though some do. 
+
+If the grand jury decides that the defendant may be charged with the crime--and usually they do--then the defendant hires a lawyer or is provided with a public defender, and the case goes before a trial jury, usually at one of the district courts (if it’s a federal crime). 
+
+
+## Defendants 
+“Fair trial” before a “jury of peers”
+You can’t be sent to prison without a trial--though you may be held while awaiting trial
+Protection against being tried for the same crime twice (“double jeopardy”)
+The right to a speedy trial by an impartial jury (how is this interpreted)
+The right to cross-examine witnesses, and to call witnesses to support their case
+The right to legal representation (usually a lawyer)
+The right to avoid self-incrimination (You can’t be forced to confess, either through interrogation or other means.)
+Protection from excessive bail, excessive fines, and cruel and unusual punishments (how is this interpreted)
+A guarantee that no person shall be deprived of life, liberty, or property without the due process of law (i.e. every person is guaranteed access to all the above items)
+
+## Prosecutors
+
+
+`
+console.log('making converter')
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+console.log(content)
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+

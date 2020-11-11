@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    a
+</div>
+<script>
+const markdown = `
+
+# How does the U.S. Court System work?
+
+## Introduction
+You've probably heard of the Supreme Court(/supreme-court). But what about all the other court cases in the United States? What about the ones you see on _Law and Order_ and in movies? And what do they all do?
+
+The Judicial branch of the U.S. government's job is to _interpret_ the law: to determine if laws that Congress passes, [executive orders from the President](/executive-order), or people's actions violate the law, and what happens if they do. The states we live in have their own court systems, too. State courts interpret state laws, decide how they apply, and what happens to people who break them. And, just to make things complicated, some cities and local governments _also_ have court systems with authority over local laws.
+
+### Why does the law need to be "interpreted"?
+The law needs to be intepreted because it's often written too generally to declare what should happen in every situation. For example, the 2nd Amendment says in plain English, "The government shouldn't take guns away from people because militias are important to national security." What relationship does that have to hunters having guns, or police, or gun collectors? Do you need to be in a militia to own a gun? If you own one, who can you point it at? What happens if you actually shoot somebody? Is it different if that person is in your home vs. standing on a street corner?
+
+The U.S. courts have to decide how to relate the language of the law to specific examples. One they've done this, we often refer back to those decisions when similar ones come up. [This is called "precedent"](https://www.law.cornell.edu/wex/precedent).
+
+## The federal court system
+The official job of our federal courts is to decide if laws that Congress makes violate the Constitution and its Amendments, and how to apply laws in specific situations. The most powerful court in our country is the Supreme Court, but most court cases don't start there. Instead, they begin in an "inferior," or "lower," court, such as a District Court. If you lose a case in a District Court, you can appeal your case and have a higher court review the decision. For this reason, the Supreme Court is usually an "appellate" court. Appellate just means a court to which you have appealed your case's decision.
+
+Here are courts in order of authority:
+* Supreme Court (there's just 1 of these)
+* Appeals Courts (also called "Regional" or "Circuit" courts) (13 of these)
+* District Courts (94 of these)
+
+### How trials work in federal courts
+Federal courts try 2 types of cases, criminal and civil. A criminal case is when someone is accused of breaking the law, and a civil case is a disagreement between people or organizations that needs to be settled in court. They actually have slightly different procedures, but in the interest of this piece not taking forever to read (or write!), let's imagine that that you're on trial for a federal crime.
+
+If your case reached trial, it would happen in a District Court. If you lost, you might make an appeal to one of the Appeals Courts. Appeals Courts don't "re-try" your case; they just determine if your original trial was legit. They're made up of 3 judges who review the proceedings and decide if the law was correctly intepreted. There's no evidence presented, witnesses, etc. If you don't like the decision they reach, you can then appeal to the Supreme Court, which is a panel of (usually) 9 justices whose ruling is final.
+
+### Also: Bankruptcy Courts
+Federal courts have exclusive authority over bankruptcy cases. You can't file a bankrupty case in a state court. Bankruptcy means that you can't pay your debts, and you're asking a court to fairly distribute what you have left or provide you more time to pay what you owe.
+
+### How do we get judges
+Federal judges, unlike other roles in government, are nominated by the president and confirmed (voted on) by the [Senate](/the-us-senate). They usually begin as lawyers, or perhaps they hold a position as a state or local judge. They serve for life, and [they can be impeached](https://www.senate.gov/artandhistory/history/minute/Senate_Tries_Justice.htm). 
+
+### Are federal judges "political"?
+This is a complicated question. I think the fairest answer is that yes, and that's how it _must_ work. Both [conservatives](/whats-a-conservative') and [liberals](/whats-a-liberal) make getting judges appointed part of their political strategies. This makes sense, as the political leanings of judge matter a lot to how laws are intepreted. For example, if you believe the government should collect more taxes to solve more social problems, you want a judge with a more liberal interpretation of federal law. If you think government collecting taxes is generally bad, you want more conservative judges who are more likely to rule that a new tax is unconstitutional. Nobody's perspective is neutral; everyone's falls somewhere in the [political spectrum](/left-right-political-spectrum). With that in mind, it makes sense that the people who appoint judges pick the ones they think will support the most "just" interpretation our laws.
+
+## State and local courts
+As I mentioned above, each state has its own court system, too. These are defined in the state's constitution. All states have at least one Supreme Court. Texas and Oklahoma have 2--one for criminal cases and one for civil cases. They also have court systems with authority over specific legal matters, such as probate court (wills and estates), juvenile court, family court, etc.
+
+State judges are sometimes elected and sometimes appointed--it depends on the state.
+
+In general, you can't appeal state court decisions to federal courts. An exception to this would be if you were arguing that the state's law is unconstitutional. In that case, the Supreme Court itself might want to review it.
+
+### Municipal and county courts
+Since cities and counties make laws that differ from state and federal laws, they sometimes need their own courts, too. You might end up here if you violate a city ordinance, if you're suing somebody for a (relatively) small amount of money, or if you're part of a landlord tenant dispute. These courts differ depending on where you are, though they still have to adhere to state and federal laws. 
+
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+

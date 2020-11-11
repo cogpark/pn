@@ -54,6 +54,11 @@ def constitution():
     metadata = {"description": "The Constitution was written in 1787 and ratified in 1788. It lays out a structure for our government.", "title": "The Constitution of the United States", "keywords":"constitution, U.S. government, founding document, constitution ratified"}
     return render_template('constitution.html', metadata=metadata)
 
+@application.route('/us-court-system')
+def us_courts():
+    metadata = {"description": "The Judicial branch of the U.S. government interprets the law. U.S. states have court systems, and some cities and local governments do also.", "title": "The U.S. court system", "keywords":"judicial branch, federal court, state court, supreme court, local court"}
+    return render_template('us-court-system.html', metadata=metadata)
+
 @application.route('/whats-a-democrat')
 def democrat():
     metadata = {"description":"Democrats think government should solve social problems and shouldn't regulate sexuality or individual identity.", "title":"What is a Democrat?"}

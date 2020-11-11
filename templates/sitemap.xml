@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.participationnation.us/</loc>
+      <loc>https://participationnation.us/</loc>
       <lastmod>2020-08-01</lastmod>
       <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/all-elections</loc>
+      <loc>https://participationnation.us/all-elections</loc>
       <lastmod>2020-09-01</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/amendments-eleven-through-twenty-seven</loc>
+      <loc>https://participationnation.us/amendments-eleven-through-twenty-seven</loc>
       <lastmod>2020-09-01</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/bill-of-rights</loc>
+      <loc>https://participationnation.us/bill-of-rights</loc>
       <lastmod>2020-09-01</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/whats-a-conservative</loc>
+      <loc>https://participationnation.us/whats-a-conservative</loc>
       <lastmod>2020-09-05</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/whats-a-democrat</loc>
+      <loc>https://participationnation.us/constitution-united-states</loc>
+      <lastmod>2020-10-20</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://participationnation.us/whats-a-democrat</loc>
       <lastmod>2020-09-05</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>http://www.participationnation.us/democratic-socialist</loc>
+      <loc>http://participationnation.us/democratic-socialist</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>yearly</changefreq>
    </url>
@@ -41,12 +46,12 @@
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/executive-order</loc>
+      <loc>https://participationnation.us/executive-order</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/house-of-representatives</loc>
+      <loc>https://participationnation.us/house-of-representatives</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>yearly</changefreq>
    </url>
@@ -56,7 +61,7 @@
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/whats-a-liberal</loc>
+      <loc>https://participationnation.us/whats-a-liberal</loc>
       <lastmod>2020-09-13</lastmod>
       <changefreq>yearly</changefreq>
    </url>
@@ -66,7 +71,7 @@
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/whats-a-liberatarian</loc>
+      <loc>https://participationnation.us/whats-a-liberatarian</loc>
       <lastmod>2020-09-13</lastmod>
       <changefreq>yearly</changefreq>
    </url>
@@ -76,27 +81,32 @@
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/supreme-court</loc>
+      <loc>https://participationnation.us/supreme-court</loc>
       <lastmod>2020-09-13</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/the-us-senate</loc>
+      <loc>https://participationnation.us/us-court-system</loc>
+      <lastmod>2020-11-11</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://participationnation.us/the-us-senate</loc>
       <lastmod>2020-09-18</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/taxes</loc>
+      <loc>https://participationnation.us/taxes</loc>
       <lastmod>2020-09-18</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation.us/attorney-general</loc>
+      <loc>https://participationnation.us/attorney-general</loc>
       <lastmod>2020-10-06</lastmod>
       <changefreq>yearly</changefreq>
    </url>
    <url>
-      <loc>https://www.participationnation/left-right-political-spectrum</loc>
+      <loc>https://participationnation/left-right-political-spectrum</loc>
       <lastmod>2020-10-12</lastmod>
       <changefreq>yearly</changefreq>
    </url>
