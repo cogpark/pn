@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    a
+</div>
+<script>
+const markdown = `
+# About _Participation Nation_
+*A site about U.S. politics and government in language that doesn't require you to have a lot of background knowledge about either.*
+_last update: 2020-11-16_
+
+My name is Adam, and I started this site with the intention of describing as clearly as possible how to register and vote in every state. This combined two of my interests: government (I work in state government) and access to information (I used to study writing and argument as a PhD student).
+
+However, not long into this project, a little thinking and [a little research](https://medium.com/civic-designing/the-epic-journey-of-american-voters-ed07bd0e6c57) had me asking a slightly different question: Why would you vote if you weren't sure what you were voting for or why it mattered?
+
+It's not that information on who & what you're voting for isn't out there in the world. It's just hard to get at. Where do you begin? U.S. politics today is a collision of beliefs about what people should be free to do and what not do do, how government should be structured and operated, who should pay for what, and so on. It's often boring, often irritating, and always messy. And if you haven't been paying attention for a long time, it's painfully hard to know where to start learning. My motivation here is to reduce the messiness by defining the important terms in our political conversation--the ones you hear over and over again, that people assume you know when you use them. 
+
+There are 2 important components to this. First, descriptions of government tend to be full of acronyms, old legal jargon, and vaguary. This site tries to spell out the acronyms, explain what the old legal jargon is getting at, and give concrete examples of how the vaguary is interpreted. 
+
+Second: I believe that when we describe how government works, we should acknowledge the powerful role that politics has in shaping it. For example, when we say that Congress's job is to make laws, we shouldn't leave aside that the people who make up Congress have, at times, incredibly diverging beliefs about what those laws should be. When we say that the Supreme Court is the most powerful court of law in the U.S., we should also acknowledge that the judges that make up the Supreme Court will interpret our laws more conservatively or more progressively depending on their political stances. 
+
+One last note. This site is about introduction, not persuasion. It's for people who want a way in to discussions about politics and government but are having trouble finding it. Hardcore partisans are unlikely to find it interesting, as I don't take particuarly strong stances anywhere here. 
+
+That said, nobody can write or speak without taking a stance. You always have some relationship toward your content--irritated, respectful, delighted, coldly detached etc--that shapes how you characterize it. In my case, I think the vision described in our founding documents seems generally good, a little out of date, and that we often fail to live up to it. I also think it's sort of bizarre whenever people allude to our founding documents as if they are more powerful than the political parties that interpet them. You'll see all of that in _Particiption Nation_: Hope, frustration, and at least a pinch of cynicism. 
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+

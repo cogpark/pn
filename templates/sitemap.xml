@@ -6,6 +6,11 @@
       <changefreq>monthly</changefreq>
    </url>
    <url>
+      <loc>https://participationnation.us/about</loc>
+      <lastmod>2020-11-20</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
       <loc>https://participationnation.us/all-elections</loc>
       <lastmod>2020-09-01</lastmod>
       <changefreq>yearly</changefreq>
@@ -108,6 +113,11 @@
    <url>
       <loc>https://participationnation/left-right-political-spectrum</loc>
       <lastmod>2020-10-12</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://participationnation/vice-president</loc>
+      <lastmod>2020-11-18</lastmod>
       <changefreq>yearly</changefreq>
    </url>
 </urlset> 

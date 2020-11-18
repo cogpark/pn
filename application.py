@@ -23,6 +23,12 @@ def index():
     metadata = {"description": "We clarify information about voting in United States elections: Registration deadlines, how to vote early & absentee, and links to your state's critical information about voting.","title": "Voting information for all U.S. states", "keywords":"voter registration, registration deadlines, voter ID, voter ID requirements, vote by mail"}   
     return render_template('voting-info.html', us_states=us_states, metadata=metadata)
 
+@application.route('/about')
+def about():
+    metadata = {'description': "A site about U.S. politics and government that doesn't require a lot of background knowledge about either.", "title":"About Participation Nation"}
+
+    return render_template('attorney-general.html', metadata=metadata)
+
 @application.route('/attorney-general')
 def attorney_general():
     metadata = {'description': "The attorney general is part of the president's cabinet and oversees the Department of Justice.", "title":"What are attorneys general and what do they do?"}
@@ -123,6 +129,11 @@ def senate():
 def what_are_taxes():
     metadata = {"description":"Taxes are money you pay to your federa, state, and local governments. Governments then use this money to fund services.", "title":"What are taxes?"}
     return render_template('taxes.html', metadata=metadata)
+
+@application.route('/vice-president')
+def vice_president():
+    metadata = {"description":"The vice president becomes president if the current president dies or leaves office and oversees the senate.", "title":"What does the vice president of the United States do?", "keywords":"vice president, VP, vice president's job, leader of senate" }
+    return render_template('vice-president.html', metadata=metadata)
 
 @application.route('/api/absentee/<state>')
 def send_absentee_data(state):
