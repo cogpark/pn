@@ -5,10 +5,11 @@ function openNav() {
     "block" === e.style.display
         ? ((e.style.display = "none"), (t.style.backgroundColor = "#8C0813"), (document.querySelector("#content").style.opacity = 1), (document.querySelector("#content").style.position = "relative") (document.querySelector("header").style.opacity = 1))
         : ((document.querySelector("#content").style.opacity = 0.25), (document.querySelector("#content").style.position = "fixed"), (document.querySelector("header").style.opacity = 0.25), (e.style.display = "block"), (t.style.backgroundColor = "#426480"));
+
+    window.addEventListener("resize", function () {
+        (document.querySelector("button.mobile-menu").display = "none") && ((document.querySelector("#content").style.opacity = 1), (t.style.backgroundColor = "#8C0813"), (document.querySelector("#content").style.position = "relative"), (document.querySelector("header").style.opacity = 1));
+    });
 }
-window.addEventListener("resize", function () {
-    (document.querySelector("button.mobile-menu").display = "none") && ((document.querySelector("#content").style.opacity = 1), (t.style.backgroundColor = "#8C0813"), (document.querySelector("#content").style.position = "relative"), (document.querySelector("header").style.opacity = 1));
-});
 
 </script>
 

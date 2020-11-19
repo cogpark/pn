@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+{% block content %}
+
+<script src='https://unpkg.com/showdown/dist/showdown.min.js'></script>
+<div id=content-entrypoint>
+    You must have javascript enabled to use this site.
+</div>
+<script>
+const markdown = `
+# About Participation Nation
+*Descriptions of U.S. politics and government that don't expect you to have a law degree understand them.*
+
+_last update: 2020-11-16_
+
+## How it started
+My name is Adam, and I started this site with the intention of describing as clearly as possible how to register and vote in every state. That's what you'll find [on the home page](/).
+
+However, not long into this project, a little thinking and [a little research](https://medium.com/civic-designing/the-epic-journey-of-american-voters-ed07bd0e6c57) had me asking, why would you vote if you weren't sure what you were voting for or why it mattered?
+
+## Politics is an intense conversation you're not part of
+Imagine you're at a party, and there's an intense conversation happening. You might have an opinion, or you might be curious about something--but it's not easy to get people to stop, invite you in, explain the terms of the debate or its history.  It's hard to start participating if you haven't been all along.
+
+That's a little like U.S. politics today: A lively, sometimes destructive, collision of beliefs about what people should be free to do and what not do do, how government should be run, who should pay for what, and so on. It can be confusing, irritating, and boring, sometimes all at once. And if you haven't paid attention before, it's painfully hard to know where to start learning. 
+
+My motivation here is to reduce the messiness by defining the important terms in our political conversation--the ones you hear over and over again, that people assume you already know.
+
+There are 2 important components to this. First, descriptions of government tend to be full of acronyms, old legal jargon, and vaguary. I want to spell out the acronyms, explain what the old legal jargon is getting at, and give concrete examples of how the vaguary is interpreted. 
+
+Second: I believe that when we describe how government works, we should acknowledge the powerful role that politics has in shaping it. For example, when we say that Congress's job is to make laws, we shouldn't leave aside that the people who make up Congress have incredibly diverging beliefs about what those laws should be. When we say that the Supreme Court is the most powerful court of law in the U.S., we should also acknowledge that the judges that wield that power do so more more conservatively or more progressively depending on their political stances. 
+
+## This site is about introduction, not persuasion
+It's for people who want a way in to discussions about politics and government but are having trouble finding it. Hardcore partisans are unlikely to find it interesting, as I don't take particuarly strong stances anywhere here. 
+
+That said, nobody can write or speak without taking a stance. You always have some relationship toward your content--irritated, respectful, delighted, coldly detached etc--that shapes how you characterize it. In my case, I think the vision described in our founding documents seems generally good, a little out of date, and that we often fail to live up to it. I also think it's sort of bizarre whenever people allude to our founding documents as if they are more powerful than the political parties that interpet them. You'll see all of that in _Particiption Nation_: Hope, frustration, and at least a pinch of cynicism. 
+
+##  Who am I?
+I'm interested in government (I work in state government), and how information about government might be easier to get and to understand. In a former life as a PhD stududent, I studied writing, argument, and barriers to literacy. 
+`
+var converter = new showdown.Converter();
+var html = converter.makeHtml(markdown);
+
+var content = document.querySelector('#content-entrypoint');
+content.innerHTML = html;
+</script>
+
+{% endblock %}
+

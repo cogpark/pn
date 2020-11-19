@@ -25,9 +25,9 @@ def index():
 
 @application.route('/about')
 def about():
-    metadata = {'description': "A site about U.S. politics and government that doesn't require a lot of background knowledge about either.", "title":"About Participation Nation"}
+    metadata = {'description': "A site about U.S. politics and government that doesn't require a lot of background knowledge about either.", "title":"About Participation Nation", "keywords":"participation nation, about participation nation, about politics, about government"}
 
-    return render_template('attorney-general.html', metadata=metadata)
+    return render_template('about.html', metadata=metadata)
 
 @application.route('/attorney-general')
 def attorney_general():
@@ -47,7 +47,7 @@ def more_amendments():
 
 @application.route('/bill-of-rights')
 def bill_of_rights():
-    metadata = {'description': "The Bill of Rights is the first 10 amendments to the Constitution. It was written by James Madison and ratified in 1791, 3 years after the Constitution was.", "title":"The Bill of Rights"}
+    metadata = {'description': "The Bill of Rights is the first 10 amendments to the Constitution. It was written by James Madison and ratified in 1791, 3 years after the Constitution was.", "title":"The Bill of Rights", "keywords": "amendments, freedom of speech, right to bear arms, freedom of religion"}
     return render_template('bill-of-rights.html', metadata=metadata)
 
 @application.route('/whats-a-conservative')
@@ -127,7 +127,7 @@ def senate():
 
 @application.route('/taxes')
 def what_are_taxes():
-    metadata = {"description":"Taxes are money you pay to your federa, state, and local governments. Governments then use this money to fund services.", "title":"What are taxes?"}
+    metadata = {"description":"Taxes are money you pay to your federa, state, and local governments. Governments then use this money to fund services.", "title":"What are taxes?", "keywords":"property tax, sales tax, tax brackets, income tax, estate tax"}
     return render_template('taxes.html', metadata=metadata)
 
 @application.route('/vice-president')
